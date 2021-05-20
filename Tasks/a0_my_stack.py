@@ -22,8 +22,9 @@ def pop() -> Any:
 
     :return: popped element
     """
-    last_elem = my_stack.pop()
-    return last_elem
+    if my_stack:
+        last_elem = my_stack.pop()
+        return last_elem
 
 
 
@@ -35,8 +36,10 @@ def peek(ind: int = 0) -> Any:
     :param ind: index of element (count from the top, 0 - top, 1 - first from top, etc.)
     :return: peeked element or None if no element in this place
     """
+    if 0 <= ind < len(my_stack):
+        return my_stack[-1 - ind]
 
-    return my_stack[-1 - ind]
+
 
 
 def clear() -> None:
