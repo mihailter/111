@@ -11,6 +11,7 @@ def push(elem: Any) -> None:
     :param elem: element to be pushed
     :return: Nothing
     """
+    my_stack.append(elem)
     print(elem)
     return None
 
